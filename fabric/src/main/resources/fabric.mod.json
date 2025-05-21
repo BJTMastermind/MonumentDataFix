@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "monumentdatafix",
+  "version": "${version}",
+  "name": "Monument Data Fix",
+  "description": "API support for data fixers",
+  "environment": "*",
+  "contact": {
+    "homepage": "https://github.com/QWERTY770",
+    "sources": "https://github.com/QWERTY770/MonumentDataFix",
+    "issues": "https://github.com/QWERTY770/MonumentDataFix/issues"
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "fabric-api": ">=0.98.0",
+    "minecraft": ">=1.21",
+    "java": ">=21"
+  },
+  "suggests": {
+    "spmreborn": ">=1.21.1-1.0.0",
+    "firefly8": ">=1.21.4-3.0.0-beta2"
+  },
+  "entrypoints": {
+    "main": [
+    ],
+    "client": [
+    ],
+    "preLaunch": [
+      "top.qwerty770.monument.datafix.fabric.MonumentDataFixPreLaunch"
+    ]
+  },
+  "authors": [
+    "QWERTY770"
+  ],
+  "mixins": [
+    "mixins.monument-datafix.json"
+  ]
+}

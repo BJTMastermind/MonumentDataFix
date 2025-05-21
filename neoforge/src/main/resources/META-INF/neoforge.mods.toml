@@ -1,0 +1,34 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="MIT License"
+issueTrackerURL="https://github.com/QWERTY770/MonumentDataFix/issues"
+
+[[mods]]
+    modId="monumentdatafix"
+    version="${version}"
+    displayName="Monument Data Fix"
+    authors="QWERTY770"
+    description="""API support for data fixers"""
+    displayURL="https://github.com/QWERTY770/MonumentDataFix"
+    logoFile=""
+
+[[accessTransformers]]
+    file="META-INF/accesstransformer.cfg"
+
+[[mixins]]
+    config="mixins.monument-datafix.json"
+[[mixins]]
+    config="mixins.monument-datafix-forge.json"
+
+[[dependencies.monumentdatafix]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.0.0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.monumentdatafix]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21,)"
+    ordering="NONE"
+    side="BOTH"

@@ -1,0 +1,11 @@
+{
+  "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_17",
+  "required": true,
+  "package": "top.qwerty770.monument.datafix.forge.mixin",
+  "mixins": [
+    "DataFixersMixinForge"
+  ],
+  "client": [
+  ]
+}
