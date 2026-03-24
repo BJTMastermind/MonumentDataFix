@@ -1,12 +1,13 @@
-package top.qwerty770.monument.datafix.mixin;
+package me.bjtmastermind.easy_data_fix.mixin;
 
 import com.mojang.serialization.Dynamic;
+
+import me.bjtmastermind.easy_data_fix.api.DataFixerRegistry;
 import net.minecraft.util.datafix.fixes.ItemStackComponentizationFix;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import top.qwerty770.monument.datafix.api.DataFixerRegistry;
 
 @Mixin(ItemStackComponentizationFix.class)
 public class DataComponentTypeAdditionMixin {

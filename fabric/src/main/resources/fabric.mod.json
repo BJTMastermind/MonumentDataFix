@@ -1,8 +1,8 @@
 {
     "schemaVersion": 1,
-    "id": "monument_data_fix",
+    "id": "easy_data_fix",
     "version": "${version}",
-    "name": "Monument Data Fix",
+    "name": "Easy Data Fix",
     "description": "API support for data fixers",
     "authors": [
         "BJTMastermind",
@@ -16,12 +16,12 @@
     "icon": "icon.png",
     "environment": "*",
     "entrypoints": {
-        "preLaunch": [
-            "top.qwerty770.monument.datafix.fabric.MonumentDataFixPreLaunch"
+        "main": [
+            "me.bjtmastermind.easy_data_fix.fabric.EasyDataFixModFabric"
         ]
     },
     "mixins": [
-        "mixins.monument-datafix.json"
+        "easy_data_fix.mixins.json"
     ],
     "depends": {
         "fabricloader": ">=0.18.4",

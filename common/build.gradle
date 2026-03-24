@@ -3,7 +3,7 @@ architectury {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/monument-datafix.accesswidener")
+    accessWidenerPath = file("src/main/resources/easy_data_fix.accesswidener")
 }
 
 dependencies {

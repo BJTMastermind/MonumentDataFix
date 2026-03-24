@@ -1,4 +1,4 @@
-package top.qwerty770.monument.datafix.api;
+package me.bjtmastermind.easy_data_fix.api;
 
 import net.minecraft.util.datafix.schemas.NamespacedSchema;
 import org.jetbrains.annotations.ApiStatus;

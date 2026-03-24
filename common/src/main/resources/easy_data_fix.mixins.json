@@ -1,0 +1,16 @@
+{
+    "required": true,
+    "package": "me.bjtmastermind.easy_data_fix.mixin",
+    "compatibilityLevel": "JAVA_21",
+    "mixins": [
+        "DataComponentTypeAdditionMixin",
+        "DataComponentTypeInjectionMixin",
+        "DataFixersMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    },
+    "overwrites": {
+        "requireAnnotations": true
+    }
+}

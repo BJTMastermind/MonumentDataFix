@@ -4,9 +4,9 @@ license="MIT"
 issueTrackerURL="https://github.com/BJTMastermind/MonumentDataFix/issues"
 
 [[mods]]
-    modId="monument_data_fix"
+    modId="easy_data_fix"
     version="${version}"
-    displayName="Monument Data Fix"
+    displayName="Easy Data Fix"
     authors="""BJTMastermind,
            QWERTY770 (Upstream Maintainer)"""
     description="""API support for data fixers"""
@@ -16,15 +16,15 @@ issueTrackerURL="https://github.com/BJTMastermind/MonumentDataFix/issues"
     file="META-INF/accesstransformer.cfg"
 
 [[mixins]]
-    config="mixins.monument-datafix.json"
+    config="easy_data_fix.mixins.json"
 
-[[dependencies.monument_data_fix]]
+[[dependencies.easy_data_fix]]
     modId="neoforge"
     type="required"
     versionRange="[21.6.20-beta,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.monument_data_fix]]
+[[dependencies.easy_data_fix]]
     modId="minecraft"
     type="required"
     versionRange="[1.21.6,)"
