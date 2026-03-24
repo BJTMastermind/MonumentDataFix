@@ -10,7 +10,8 @@ import top.qwerty770.monument.datafix.api.DataFixerRegistry;
 
 @Mixin(ItemStackComponentizationFix.class)
 public class DataComponentTypeAdditionMixin {
-    @Inject(at = @At("RETURN"), method = "fixItemStack(Lnet/minecraft/util/datafix/fixes/ItemStackComponentizationFix$ItemStackData;Lcom/mojang/serialization/Dynamic;)V")
+
+    @Inject(method = "fixItemStack(Lnet/minecraft/util/datafix/fixes/ItemStackComponentizationFix$ItemStackData;Lcom/mojang/serialization/Dynamic;)V", at = @At("RETURN"))
     private static void fixItemStackInject(ItemStackComponentizationFix.ItemStackData itemStackData, Dynamic<?> tag, CallbackInfo ci) {
         DataFixerRegistry.ADDITIONS.values().forEach(addition -> addition.apply(itemStackData, tag));
     }

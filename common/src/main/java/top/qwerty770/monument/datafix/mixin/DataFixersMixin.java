@@ -11,7 +11,8 @@ import top.qwerty770.monument.datafix.api.DataFixerRegistry;
 
 @Mixin(DataFixers.class)
 public class DataFixersMixin {
-    @Inject(at = @At("RETURN"), method = "addFixers")
+
+    @Inject(method = "addFixers", at = @At("RETURN"))
     private static void addFixers(DataFixerBuilder builder, CallbackInfo ci){
         DataFixerRegistry.DATA_FIXERS.values().forEach(fix -> fix.accept(builder));
         MonumentDataFix.LOGGER.info("{} custom data fixers initialized by Monument Data Fix!", DataFixerRegistry.DATA_FIXERS.size());

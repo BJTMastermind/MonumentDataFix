@@ -1,38 +1,35 @@
 {
-  "schemaVersion": 1,
-  "id": "monumentdatafix",
-  "version": "${version}",
-  "name": "Monument Data Fix",
-  "description": "API support for data fixers",
-  "environment": "*",
-  "contact": {
-    "homepage": "https://github.com/QWERTY770",
-    "sources": "https://github.com/QWERTY770/MonumentDataFix",
-    "issues": "https://github.com/QWERTY770/MonumentDataFix/issues"
-  },
-  "depends": {
-    "fabricloader": ">=0.15.0",
-    "fabric-api": ">=0.98.0",
-    "minecraft": ">=1.21",
-    "java": ">=21"
-  },
-  "suggests": {
-    "spmreborn": ">=1.21.1-1.0.0",
-    "firefly8": ">=1.21.4-3.0.0-beta2"
-  },
-  "entrypoints": {
-    "main": [
+    "schemaVersion": 1,
+    "id": "monument_data_fix",
+    "version": "${version}",
+    "name": "Monument Data Fix",
+    "description": "API support for data fixers",
+    "authors": [
+        "BJTMastermind",
+        "QWERTY770 (Upstream Mantainer)"
     ],
-    "client": [
+    "contact": {
+        "sources": "https://github.com/BJTMastermind/MonumentDataFix",
+        "issues": "https://github.com/BJTMastermind/MonumentDataFix/issues"
+    },
+    "license": "MIT",
+    "icon": "icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "preLaunch": [
+            "top.qwerty770.monument.datafix.fabric.MonumentDataFixPreLaunch"
+        ]
+    },
+    "mixins": [
+        "mixins.monument-datafix.json"
     ],
-    "preLaunch": [
-      "top.qwerty770.monument.datafix.fabric.MonumentDataFixPreLaunch"
-    ]
-  },
-  "authors": [
-    "QWERTY770"
-  ],
-  "mixins": [
-    "mixins.monument-datafix.json"
-  ]
+    "depends": {
+        "fabricloader": ">=0.18.4",
+        "minecraft": "~1.21.6",
+        "java": ">=21",
+        "fabric-api": "*"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
 }

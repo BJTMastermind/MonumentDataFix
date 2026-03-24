@@ -17,7 +17,6 @@ import java.util.function.Supplier;
 
 import static top.qwerty770.monument.datafix.MonumentDataFix.DEBUG;
 
-@SuppressWarnings("unused")
 @ApiStatus.AvailableSince("1.0.0")
 public class DataFixerRegistry {
     public static Map<String, CustomDataFixer> DATA_FIXERS = new HashMap<>();

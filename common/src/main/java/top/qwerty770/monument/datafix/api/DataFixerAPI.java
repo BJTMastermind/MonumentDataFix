@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.function.UnaryOperator;
 
-@SuppressWarnings("unused")
 @ApiStatus.AvailableSince("1.0.0")
 public class DataFixerAPI {
     public static UnaryOperator<String> createRenamerNoNamespace(Map<String, String> renameMap) {

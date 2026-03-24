@@ -14,9 +14,10 @@ import java.util.function.Supplier;
 
 @Mixin(V3818_3.class)
 public class DataComponentTypeInjectionMixin {
+
     @Inject(at = @At("RETURN"), method = "components")
     private static void componentsInject(Schema schema, CallbackInfoReturnable<SequencedMap<String, Supplier<TypeTemplate>>> cir) {
-        var sequencedMap = cir.getReturnValue();
+        SequencedMap<String, Supplier<TypeTemplate>> sequencedMap = cir.getReturnValue();
         DataFixerRegistry.INJECTIONS.values().forEach(injection -> injection.apply(schema, sequencedMap));
     }
 }
