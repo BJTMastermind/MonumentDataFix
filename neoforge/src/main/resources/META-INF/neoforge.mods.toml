@@ -1,7 +1,7 @@
 modLoader="javafml"
 loaderVersion="[1,)"
 license="MIT"
-issueTrackerURL="https://github.com/BJTMastermind/MonumentDataFix/issues"
+issueTrackerURL="https://github.com/BJTMastermind/easy-data-fix/issues"
 
 [[mods]]
     modId="easy_data_fix"
@@ -10,7 +10,7 @@ issueTrackerURL="https://github.com/BJTMastermind/MonumentDataFix/issues"
     authors="""BJTMastermind,
            QWERTY770 (Upstream Maintainer)"""
     description="""API support for data fixers"""
-    displayURL="https://github.com/BJTMastermind/MonumentDataFix"
+    displayURL="https://github.com/BJTMastermind/easy-data-fix"
 
 [[accessTransformers]]
     file="META-INF/accesstransformer.cfg"

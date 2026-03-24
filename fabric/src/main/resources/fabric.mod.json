@@ -9,8 +9,8 @@
         "QWERTY770 (Upstream Mantainer)"
     ],
     "contact": {
-        "sources": "https://github.com/BJTMastermind/MonumentDataFix",
-        "issues": "https://github.com/BJTMastermind/MonumentDataFix/issues"
+        "sources": "https://github.com/BJTMastermind/easy-data-fix",
+        "issues": "https://github.com/BJTMastermind/easy-data-fix/issues"
     },
     "license": "MIT",
     "icon": "icon.png",
