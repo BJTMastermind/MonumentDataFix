@@ -1,5 +1,13 @@
 package me.bjtmastermind.easy_data_fix.api;
 
+import static me.bjtmastermind.easy_data_fix.EasyDataFixMod.DEBUG;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.SequencedMap;
+import java.util.function.Function;
+import java.util.function.Supplier;
+
 import com.mojang.datafixers.DataFix;
 import com.mojang.datafixers.DataFixerBuilder;
 import com.mojang.datafixers.schemas.Schema;
@@ -8,14 +16,6 @@ import com.mojang.serialization.Dynamic;
 
 import me.bjtmastermind.easy_data_fix.EasyDataFixMod;
 import net.minecraft.util.datafix.fixes.ItemStackComponentizationFix;
-
-import static me.bjtmastermind.easy_data_fix.EasyDataFixMod.DEBUG;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.SequencedMap;
-import java.util.function.Function;
-import java.util.function.Supplier;
 
 public class DataFixerRegistry {
     public static Map<String, CustomDataFixer> DATA_FIXERS = new HashMap<>();

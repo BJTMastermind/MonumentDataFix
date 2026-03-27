@@ -1,13 +1,11 @@
 package me.bjtmastermind.easy_data_fix.api;
 
-import net.minecraft.util.datafix.schemas.NamespacedSchema;
-import org.jetbrains.annotations.ApiStatus;
-
 import java.util.Map;
 import java.util.Objects;
 import java.util.function.UnaryOperator;
 
-@ApiStatus.AvailableSince("1.0.0")
+import net.minecraft.util.datafix.schemas.NamespacedSchema;
+
 public class DataFixerAPI {
     public static UnaryOperator<String> createRenamerNoNamespace(Map<String, String> renameMap) {
         return string -> (String)renameMap.getOrDefault(string, string);
