@@ -12,9 +12,6 @@ issueTrackerURL="https://github.com/BJTMastermind/easy-data-fix/issues"
     description="""API support for data fixers"""
     displayURL="https://github.com/BJTMastermind/easy-data-fix"
 
-[[accessTransformers]]
-    file="META-INF/accesstransformer.cfg"
-
 [[mixins]]
     config="easy_data_fix.mixins.json"
 
