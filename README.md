@@ -22,78 +22,24 @@
 
 ## Using The Library In Development
 
-To setup the data fixers for your mod you will need at least 3 things, a schema class, the renameing fix class, and registering the data fix.
+To setup data fixers for your mod you just need to register them on pre-launch using Easy Data Fix's API. See example below.
 
-### Setting up the schema
-
-**ModSchemaV0.java**
 ```java
-public class ModSchemaV0 extends NamespacedSchema {
-    public ModSchemaV0(int versionKey, Schema parent) {
-        super(versionKey, parent);
-    }
-
-    // Optional: register all entity fixes here.
+public class ExampleFix implements PreLaunchEntrypoint {
     @Override
-    public Map<String, Supplier<TypeTemplate>> registerEntities(Schema schema) {
-        Map<String, Supplier<TypeTemplate>> map = super.registerEntities(schema);
-        this.registerSimple(map, "example_mod:mod_entity");
-        return map;
-    }
-
-    // Optional: register all block entity fixes here.
-    @Override
-    public Map<String, Supplier<TypeTemplate>> registerBlockEntities(Schema schema) {
-        Map<String, Supplier<TypeTemplate>> map = super.registerBlockEntities(schema);
-        this.registerSimple(map, "example_mod:mod_block_entity");
-        return map;
-    }
-}
-```
-
-### Setup id renaming
-
-**ModRename<Block/Item>Fix.java**
-```java
-public class ModRename[Block/Item]Fix extends [Block/Item]RenameFix {
-    public ModRename[Block/Item]Fix(Schema outputSchema, String name) {
-        super(outputSchema, name);
-    }
-
-    @Override
-    protected String [renameBlock/fixItem](String name) {
-        if (name.startsWith("example_mod:")) {
-            return switch (name) {
-                case "example_mod:mod_[block/item]" -> "example_mod:mod_[block/item]_new_id";
-                // Works with renamed id and namespaces
-                case "example_mod:mod_[block/item]" -> "new_example_mod:mod_[block/item]_new_id";
-                // Also works with just renamed namespace
-                default -> name.replace("example_mod:", "new_example_mod:");
-            }
-        }
-        return name;
-    }
-}
-```
-
-### Register the data fix
-
-**ExampleMod.java**
-```java
-public class ExampleFix implements ModInitializer {
-    @Override
-    public void onInitialize() {
+    public void onPreLaunch() {
         DataFixerRegistry.addDataFix("Description of data fixer", builder -> {
-            // oldDataValue = The Minecraft data value used in the version your upgrading from.
-            Schema schema = builder.addSchema(oldDataValue, ModSchemaV0::new);
-            builder.addFixer(new ModBlockRenameFix(schema, "example_mod:mod_block"));
-            builder.addFixer(new ModItemRenameFix(schema, "example_mod:mod_item"));
+            // dataVersion = The Minecraft data version used in the version your upgrading to.
+            // SchemaVersion = The builtin schema class that goes with the data version.
+            // Example: (4773, V4771::new) = 26.1 full release
+            Schema schema = builder.addSchema(dataVersion, V[SchemaVersion]::new);
+            builder.addFixer(BlockRenameFix.create(schema, "Fixer Name", DataFixerAPI.createRenamer("example_mod:mod_block", "example_mod:new_mod_block")));
+            builder.addFixer(ItemRenameFix.create(schema, "Fixer Name", DataFixerAPI.createRenamer("example_mod:mod_item", "example_mod:new_mod_item")));
         });
+        // You may also have multiple DataFixerRegistry here to better organize your data fixes or to support other versions.
     }
 }
 ```
-
-You have now completed setting up your own data fixer for your mod.
 
 ## Getting Started With Development
 
@@ -127,11 +73,3 @@ cd easy-data-fix
 ```
 
 You can find the built mod at `easy-data-fix/<loader>/build/libs/easy_data_fix-<loader>-x.x.x+mc1.21.6.jar`.
-
-<!-- ## Do I need this mod?
-
-**For general players**: If you don't need to upgrade a modded save, you don't need Monument Data Fix. If you have a modded save to upgrade, and the mod developer states that Monument Data Fix is needed as a dependency, you should install this mod.
-
-**For mod developers**: If you would like to enable your mod saves to be upgraded, make a data fixer mod using Monument Data Fix as a dependency and point out "Monument Data Fix is needed when upgrading saves" in the mod description.
-
-Currently, there isn't a program document for the mod. In order to add your custom data fixers, call `me.bjtmastermind.easy_data_fix.api.DataFixerRegistry$addDataFix(String name, CustomDataFixer dataFixer)` or `me.bjtmastermind.easy_data_fix.api.DataFixerRegistry$addDataFix(String name, Function<DataFixerBuilder, DataFix> dataFixer)` before `net.minecraft.util.datafix.DataFixers$addFixers` is called. If you have questions on the registry, refer to the 1.21 version of Monument Data Fix as an example, because it provides data fixers for two mods by default. You may submit issues on Github. -->
