@@ -17,7 +17,7 @@
 
 ## Use
 
-1. Download `easy_data_fix-<loader>-x.x.x+mc1.21.6` from on of the places at the top of this README.
+1. Download `easy_data_fix-<loader>-x.x.x+mc1.21` from on of the places at the top of this README.
 2. Copy the downloaded jar file to your `mods` folder.
 
 ## Using The Library In Development
@@ -53,7 +53,7 @@ Ensure you have the following installed on your machine:
   * [Download JDK](https://adoptium.net/)
 * **Gradle**: Version 9.2 or higher.
   * [Install Gradle](https://gradle.org/install/)
-* **Minecraft**: Version 1.21.6
+* **Minecraft**: Version 1.21
 
 ### Build
 
@@ -72,4 +72,4 @@ cd easy-data-fix
 ./gradlew clean build
 ```
 
-You can find the built mod at `easy-data-fix/<loader>/build/libs/easy_data_fix-<loader>-x.x.x+mc1.21.6.jar`.
+You can find the built mod at `easy-data-fix/<loader>/build/libs/easy_data_fix-<loader>-x.x.x+mc1.21.jar`.
