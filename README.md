@@ -22,8 +22,24 @@
 
 ## Using The Library In Development
 
-To setup data fixers for your mod you just need to register them on pre-launch using Easy Data Fix's API. See example below.
+To setup data fixers for your mod you first need to add the library as a dependency in your build.gradle file, then you just need to register them on pre-launch using Easy Data Fix's API. See example below.
 
+**build.gradle**
+```groovy
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    ...
+
+    // Replace <Tag> with the release tag string from the Releases page
+    implementation "com.github.BJTMastermind:easy-data-fix:<Tag>"
+}
+```
+
+**ExampleFix.java**
 ```java
 public class ExampleFix implements PreLaunchEntrypoint {
     @Override
