@@ -6,7 +6,7 @@
 
 <div align="center">
 
-~~Download on Modrinth~~ (Coming Soon) |
+[Download on Modrinth](https://modrinth.com/mod/easy-data-fix/versions) |
 [Download from Releases](https://github.com/BJTMastermind/easy-data-fix/releases)
 
 </div>
