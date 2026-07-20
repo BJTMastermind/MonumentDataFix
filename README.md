@@ -7,7 +7,7 @@
 <div align="center">
 
 [Download on Modrinth](https://modrinth.com/mod/easy-data-fix/versions) |
-[Download from Releases](https://github.com/BJTMastermind/easy-data-fix/releases)
+[Download from Releases](https://github.com/VoxelBill/easy-data-fix/releases)
 
 </div>
 
@@ -28,14 +28,17 @@ To setup data fixers for your mod you first need to add the library as a depende
 ```groovy
 repositories {
     mavenCentral()
-    maven { url 'https://jitpack.io' }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
 }
 
 dependencies {
     ...
 
-    // Replace <Tag> with the release tag string from the Releases page
-    implementation "com.github.BJTMastermind:easy-data-fix:<Tag>"
+    // Replace <Version> with the version number string from the Modrinth version page
+    implementation "maven.modrinth:easy-data-fix:<Version>"
 }
 ```
 
@@ -75,7 +78,7 @@ Ensure you have the following installed on your machine:
 
 1. **Clone the repository**
 ```sh
-git clone https://github.com/BJTMastermind/easy-data-fix.git
+git clone https://github.com/VoxelBill/easy-data-fix.git
 ```
 
 2. Navigate to the project directory
