@@ -1,6 +1,6 @@
-package me.bjtmastermind.easy_data_fix.fabric;
+package me.voxelbill.easy_data_fix.fabric;
 
-import me.bjtmastermind.easy_data_fix.EasyDataFixMod;
+import me.voxelbill.easy_data_fix.common.EasyDataFixMod;
 import net.fabricmc.api.ModInitializer;
 
 public class EasyDataFixModFabric implements ModInitializer {

@@ -1,7 +1,7 @@
 {
     "required": true,
-    "package": "me.bjtmastermind.easy_data_fix.mixin",
-    "compatibilityLevel": "JAVA_21",
+    "package": "me.voxelbill.easy_data_fix.common.mixin",
+    "compatibilityLevel": "JAVA_25",
     "mixins": [
         "DataFixersMixin"
     ],

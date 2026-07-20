@@ -1,4 +1,4 @@
-<p align="center"><img src="./fabric/src/main/resources/icon.png" width=96></p>
+<p align="center"><img src="./common/src/main/resources/icon.png" width=96></p>
 
 <h1><p align="center">Easy Data Fix</p></h1>
 
@@ -7,7 +7,7 @@
 <div align="center">
 
 [Download on Modrinth](https://modrinth.com/mod/easy-data-fix/versions) |
-[Download from Releases](https://github.com/BJTMastermind/easy-data-fix/releases)
+[Download from Releases](https://github.com/VoxelBill/easy-data-fix/releases)
 
 </div>
 
@@ -17,7 +17,7 @@
 
 ## Use
 
-1. Download `easy_data_fix-<loader>-x.x.x+mc1.21` from on of the places at the top of this README.
+1. Download `easy_data_fix-<loader>-x.x.x+mc26.1` from on of the places at the top of this README.
 2. Copy the downloaded jar file to your `mods` folder.
 
 ## Using The Library In Development
@@ -28,14 +28,17 @@ To setup data fixers for your mod you first need to add the library as a depende
 ```groovy
 repositories {
     mavenCentral()
-    maven { url 'https://jitpack.io' }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
 }
 
 dependencies {
     ...
 
-    // Replace <Tag> with the release tag string from the Releases page
-    implementation "com.github.BJTMastermind:easy-data-fix:<Tag>"
+    // Replace <Version> with the release tag string from the Releases page
+    implementation "maven.modrinth:easy-data-fix:<Version>"
 }
 ```
 
@@ -65,17 +68,17 @@ To get a local copy up and running, follow these simple steps.
 
 Ensure you have the following installed on your machine:
 
-* **Java Development Kit (JDK)**: Version 21 or higher.
+* **Java Development Kit (JDK)**: Version 25 or higher.
   * [Download JDK](https://adoptium.net/)
 * **Gradle**: Version 9.2 or higher.
   * [Install Gradle](https://gradle.org/install/)
-* **Minecraft**: Version 1.21
+* **Minecraft**: Version 26.1
 
 ### Build
 
 1. **Clone the repository**
 ```sh
-git clone https://github.com/BJTMastermind/easy-data-fix.git
+git clone https://github.com/VoxelBill/easy-data-fix.git
 ```
 
 2. Navigate to the project directory
@@ -88,4 +91,4 @@ cd easy-data-fix
 ./gradlew clean build
 ```
 
-You can find the built mod at `easy-data-fix/<loader>/build/libs/easy_data_fix-<loader>-x.x.x+mc1.21.jar`.
+You can find the built mod at `easy-data-fix/<loader>/build/libs/easy_data_fix-<loader>-x.x.x+mc26.1.jar`.

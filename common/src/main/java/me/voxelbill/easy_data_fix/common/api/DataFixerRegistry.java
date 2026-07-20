@@ -1,4 +1,4 @@
-package me.bjtmastermind.easy_data_fix.api;
+package me.voxelbill.easy_data_fix.common.api;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,7 +7,7 @@ import java.util.function.Function;
 import com.mojang.datafixers.DataFix;
 import com.mojang.datafixers.DataFixerBuilder;
 
-import me.bjtmastermind.easy_data_fix.EasyDataFixMod;
+import me.voxelbill.easy_data_fix.common.EasyDataFixMod;
 
 public class DataFixerRegistry {
     public static Map<String, CustomDataFixer> DATA_FIXERS = new HashMap<>();

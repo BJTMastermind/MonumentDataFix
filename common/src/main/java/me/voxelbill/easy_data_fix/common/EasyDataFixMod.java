@@ -1,4 +1,4 @@
-package me.bjtmastermind.easy_data_fix;
+package me.voxelbill.easy_data_fix.common;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

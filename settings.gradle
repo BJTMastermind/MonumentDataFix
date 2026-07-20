@@ -1,14 +1,20 @@
 pluginManagement {
     repositories {
-        maven { url = 'https://maven.fabricmc.net/' }
-        maven { url = 'https://maven.architectury.dev/' }
-        maven { url = 'https://maven.neoforged.net/releases' }
         gradlePluginPortal()
+        mavenCentral()
+        maven {
+            name = 'Fabric'
+            url = 'https://maven.fabricmc.net/'
+        }
+        maven {
+            name = 'RelativityMC'
+            url = 'https://repo.codemc.io/repository/relativitymc/'
+        }
     }
 }
 
-include("common")
-include("fabric")
-include("neoforge")
-
 rootProject.name = 'EasyDataFix'
+
+include('common')
+include('fabric')
+include('neoforge')

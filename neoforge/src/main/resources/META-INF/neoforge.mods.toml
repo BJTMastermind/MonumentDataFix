@@ -1,16 +1,16 @@
 modLoader="javafml"
-loaderVersion="[1,)"
-license="MIT"
-issueTrackerURL="https://github.com/BJTMastermind/easy-data-fix/issues"
+license="${mod_license}"
+issueTrackerURL="${mod_github}/issues"
 
 [[mods]]
-    modId="easy_data_fix"
-    version="${version}"
-    displayName="Easy Data Fix"
-    authors="""BJTMastermind,
+    modId="${mod_id}"
+    version="${mod_version}"
+    displayName="${mod_name}"
+    authors="""VoxelBill (Formerly known as BJTMastermind),
            QWERTY770 (Upstream Maintainer)"""
-    description="""API support for data fixers"""
-    displayURL="https://github.com/BJTMastermind/easy-data-fix"
+    description="""${mod_description}"""
+    displayURL="${mod_github}"
+    logoFile="${mod_icon}"
 
 [[mixins]]
     config="easy_data_fix.mixins.json"
@@ -18,12 +18,13 @@ issueTrackerURL="https://github.com/BJTMastermind/easy-data-fix/issues"
 [[dependencies.easy_data_fix]]
     modId="neoforge"
     type="required"
-    versionRange="[21.0.167,)"
+    versionRange="[${neoforge_version},)"
     ordering="NONE"
     side="BOTH"
+
 [[dependencies.easy_data_fix]]
     modId="minecraft"
     type="required"
-    versionRange="[1.21,)"
+    versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"

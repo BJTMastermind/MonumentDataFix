@@ -1,4 +1,4 @@
-package me.bjtmastermind.easy_data_fix.api;
+package me.voxelbill.easy_data_fix.common.api;
 
 import java.util.Map;
 import java.util.Objects;
