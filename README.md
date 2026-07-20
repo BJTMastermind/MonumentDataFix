@@ -37,7 +37,7 @@ repositories {
 dependencies {
     ...
 
-    // Replace <Version> with the release tag string from the Releases page
+    // Replace <Version> with the version number string from the Modrinth version page
     implementation "maven.modrinth:easy-data-fix:<Version>"
 }
 ```
