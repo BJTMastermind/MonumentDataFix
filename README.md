@@ -1,4 +1,8 @@
-<p align="center"><img src="./fabric/src/main/resources/icon.png" width=96></p>
+> [!note]
+> This project has been migrated to Codeberg and will no longer be updated here.<br>
+> Visit the projects Codeberg repository at: https://codeberg.org/VoxelBill/easy-data-fix
+
+<p align="center"><img src="./icon.png" width=96></p>
 
 <h1><p align="center">Easy Data Fix</p></h1>
 
